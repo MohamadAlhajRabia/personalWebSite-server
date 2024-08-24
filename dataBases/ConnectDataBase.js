@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 
 class ConnectDataBase {
   constructor() {
-    this.url = "mongodb+srv://turkimarzoqipersonal:personalWebSite1234@personalwebsite.jjusl.mongodb.net/?retryWrites=true&w=majority&appName=personalWebSite";
+    this.url = process.env.MONGOBD_URL ||= "mongodb+srv://turkimarzoqipersonal:personalWebSite1234@personalwebsite.jjusl.mongodb.net/?retryWrites=true&w=majority&appName=personalWebSite";
   }
 
   // #== Start connect method ==#

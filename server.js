@@ -27,7 +27,7 @@ app.use('/home',homeRoutes)
 
 
 // #== Start Listen fun ==#
-const port = 3002;
+const port = process.env.PORT|| 3002;
 app.listen(port, () => {
   console.log(`Server working on port: ${port}`);
   connect.connect(); // التأكد من الاتصال بقاعدة البيانات عند بدء تشغيل السيرفر
